@@ -798,7 +798,39 @@ document.getElementById('prev').onclick=function(){
       '⏸ Pause preview';
 
   }
+<script>
+/* =========================
+   PHOTOS
+========================= */
 
+var P = document.getElementById('photos');
+
+var imageFiles = [
+  'pic_1.png',
+  'pic_2.png',
+  'pic_3.png',
+  'pic_4.png',
+  'pic_5.png'
+];
+
+/* Create all 5 photo boxes */
+for (var i = 0; i < imageFiles.length; i++) {
+
+  var d = document.createElement('div');
+
+  d.className = 'ph has';
+
+  var img = document.createElement('img');
+
+  img.src = imageFiles[i];
+
+  img.alt = 'Photo ' + (i + 1);
+
+  d.appendChild(img);
+
+  P.appendChild(d);
+}
+</script>
 };
 
 </script>
